@@ -20,7 +20,7 @@ steps:
 
 - task: AzurePowerShell@4
   inputs:
-    azureSubscription: 'demo-deploy-sp'
+    azureSubscription: 'pavel-test-service-connection'
     ScriptPath: 'AzureResourceGroupDemo/Deploy-AzureResourceGroup.ps1'
     ScriptArguments: -ResourceGroupName 'demogroup' -ResourceGroupLocation 'centralus'
     azurePowerShellVersion: LatestVersion
