@@ -17,3 +17,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzurePowerShell@4
+  inputs:
+    azureSubscription: 'demo-deploy-sp'
+    ScriptPath: 'AzureResourceGroupDemo/Deploy-AzureResourceGroup.ps1'
+    ScriptArguments: -ResourceGroupName 'demogroup' -ResourceGroupLocation 'centralus'
+    azurePowerShellVersion: LatestVersion
